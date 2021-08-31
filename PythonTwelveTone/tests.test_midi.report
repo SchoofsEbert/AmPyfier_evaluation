@@ -1,0 +1,39 @@
+
+______________SUMMARY______________
+____TestMIDIFile___
+Amplified methods added: 0
+Collapsed time: 0:00:00.000130
+Original Mutation Score: 100.00 %
+Amplified Mutation Score: 100.00 %
+Improved Mutation Score: 0.00 %
+Killed Mutants Originally: 18
+Killed Mutants Amplified: 18
+Mutants Alive Amplified: 0
+Newly Killed Mutants Amplified: 0
+Relative Increase in Killed Mutants: 0.00 %
+
+______________DETAILS______________
+
+____TestMIDIFile___
+
+
+original
+--------
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 20) - mutation from <class 'ast.Add'> to <class 'ast.Sub'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 20) - mutation from <class 'ast.Add'> to <class 'ast.Div'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 20) - mutation from <class 'ast.Add'> to <class 'ast.Pow'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 20) - mutation from <class 'ast.Add'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 20) - mutation from <class 'ast.Add'> to <class 'ast.Mult'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 20) - mutation from <class 'ast.Add'> to <class 'ast.Mod'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 21) - mutation from <class 'ast.Sub'> to <class 'ast.Div'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 21) - mutation from <class 'ast.Sub'> to <class 'ast.Add'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 21) - mutation from <class 'ast.Sub'> to <class 'ast.Pow'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 21) - mutation from <class 'ast.Sub'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 21) - mutation from <class 'ast.Sub'> to <class 'ast.Mult'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 17, c: 21) - mutation from <class 'ast.Sub'> to <class 'ast.Mod'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 20, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Sub'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 20, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Div'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 20, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Pow'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 20, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 20, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Mult'>
+ - /home/ebert/projects/python-twelve-tone/twelve_tone/midi.py: (l: 20, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Mod'>

@@ -1,0 +1,299 @@
+
+______________SUMMARY______________
+____TestStringMethods___
+Amplified methods added: 1
+Collapsed time: 0:00:34.504189
+Original Mutation Score: 95.59 %
+Amplified Mutation Score: 96.32 %
+Improved Mutation Score: 0.74 %
+Killed Mutants Originally: 260
+Killed Mutants Amplified: 262
+Alive Mutants Amplified: 10
+Newly Killed Mutants Amplified: 2
+Relative Increase in Killed Mutants: 0.77 %
+
+______________DETAILS______________
+
+____TestStringMethods___
+
+
+original
+--------
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 7, c: 33) - mutation from True to False
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 7, c: 33) - mutation from True to None
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 12, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 12, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 12, c: 7) - mutation from <class 'ast.Is'> to <class 'ast.IsNot'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 17, c: 12) - mutation from AugAssign_Add to AugAssign_Div
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 17, c: 12) - mutation from AugAssign_Add to AugAssign_Sub
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 17, c: 12) - mutation from AugAssign_Add to AugAssign_Mult
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Div'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Add'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 19, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 20, c: 16) - mutation from AugAssign_Add to AugAssign_Div
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 20, c: 16) - mutation from AugAssign_Add to AugAssign_Sub
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 20, c: 16) - mutation from AugAssign_Add to AugAssign_Mult
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 22, c: 16) - mutation from AugAssign_Add to AugAssign_Div
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 22, c: 16) - mutation from AugAssign_Add to AugAssign_Sub
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 22, c: 16) - mutation from AugAssign_Add to AugAssign_Mult
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 25, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 25, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 25, c: 9) - mutation from <class 'ast.Is'> to <class 'ast.IsNot'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 30, c: 12) - mutation from AugAssign_Add to AugAssign_Div
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 30, c: 12) - mutation from AugAssign_Add to AugAssign_Sub
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 30, c: 12) - mutation from AugAssign_Add to AugAssign_Mult
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 15) - mutation from <class 'ast.Lt'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Div'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Add'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 32, c: 19) - mutation from <class 'ast.Sub'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 33, c: 16) - mutation from AugAssign_Add to AugAssign_Div
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 33, c: 16) - mutation from AugAssign_Add to AugAssign_Sub
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 33, c: 16) - mutation from AugAssign_Add to AugAssign_Mult
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 35, c: 16) - mutation from AugAssign_Add to AugAssign_Div
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 35, c: 16) - mutation from AugAssign_Add to AugAssign_Sub
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 35, c: 16) - mutation from AugAssign_Add to AugAssign_Mult
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 38, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 38, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 38, c: 9) - mutation from <class 'ast.Is'> to <class 'ast.IsNot'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 40, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 40, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 40, c: 9) - mutation from <class 'ast.Is'> to <class 'ast.IsNot'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 42, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 42, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 42, c: 9) - mutation from <class 'ast.Is'> to <class 'ast.IsNot'>
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 42, c: 22) - mutation from None to False
+ - /home/ebert/projects/pj/pj/__init__.py: (l: 42, c: 22) - mutation from None to True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 16, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 16, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 16, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 16, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 16, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 16, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 16, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 17, c: 17) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 17, c: 17) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 22, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 22, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 22, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 22, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 22, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 22, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 23, c: 32) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 23, c: 32) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 23, c: 39) - mutation from <class 'ast.Add'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 23, c: 39) - mutation from <class 'ast.Add'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 23, c: 39) - mutation from <class 'ast.Add'> to <class 'ast.Sub'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 23, c: 39) - mutation from <class 'ast.Add'> to <class 'ast.Div'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 23, c: 39) - mutation from <class 'ast.Add'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 23, c: 39) - mutation from <class 'ast.Add'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 25, c: 12) - mutation from AugAssign_Add to AugAssign_Div
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 25, c: 12) - mutation from AugAssign_Add to AugAssign_Sub
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 25, c: 12) - mutation from AugAssign_Add to AugAssign_Mult
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 33, c: 24) - mutation from <class 'ast.Add'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 33, c: 24) - mutation from <class 'ast.Add'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 33, c: 24) - mutation from <class 'ast.Add'> to <class 'ast.Sub'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 33, c: 24) - mutation from <class 'ast.Add'> to <class 'ast.Div'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 33, c: 24) - mutation from <class 'ast.Add'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 33, c: 24) - mutation from <class 'ast.Add'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 36, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 36, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 36, c: 11) - mutation from <class 'ast.In'> to <class 'ast.NotIn'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 37, c: 12) - mutation from AugAssign_Add to AugAssign_Div
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 37, c: 12) - mutation from AugAssign_Add to AugAssign_Sub
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 37, c: 12) - mutation from AugAssign_Add to AugAssign_Mult
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 43, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 43, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 55, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 55, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 55, c: 7) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 55, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 55, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 55, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 56, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 56, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 56, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 56, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 56, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 56, c: 9) - mutation from Slice_UnboundLower to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 56, c: 9) - mutation from Slice_UnboundLower to Slice_UnboundUpper
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 57, c: 15) - mutation from True to False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 57, c: 15) - mutation from True to None
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 58, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 58, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 58, c: 9) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 58, c: 9) - mutation from <class 'ast.GtE'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 58, c: 9) - mutation from <class 'ast.GtE'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 58, c: 9) - mutation from <class 'ast.GtE'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 59, c: 9) - mutation from Slice_UnboundLower to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 59, c: 9) - mutation from Slice_UnboundLower to Slice_UnboundUpper
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 59, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 59, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 59, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 59, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 59, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 60, c: 15) - mutation from False to True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 60, c: 15) - mutation from False to None
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 68, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 68, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 68, c: 7) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 68, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 68, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 68, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 69, c: 9) - mutation from Slice_UnboundLower to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 69, c: 9) - mutation from Slice_UnboundLower to Slice_UnboundUpper
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 69, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 69, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 69, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 69, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 69, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 70, c: 15) - mutation from True to None
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 80, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 85, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 90, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 95, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 96, c: 26) - mutation from None to False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 96, c: 26) - mutation from None to True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 101, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 101, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 101, c: 11) - mutation from <class 'ast.In'> to <class 'ast.NotIn'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 104, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 104, c: 13) - mutation from <class 'ast.In'> to <class 'ast.NotIn'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 8, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 8, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 8, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 8, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 8, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 8, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 8, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 9, c: 27) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 9, c: 27) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 11, c: 10) - mutation from True to False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 11, c: 10) - mutation from True to None
+ - /home/ebert/projects/pj/pj/parser.py: (l: 16, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 16, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 16, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 16, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 16, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 16, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 16, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 17, c: 31) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 17, c: 31) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 18, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 18, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 18, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 18, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 18, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 18, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 18, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 21, c: 21) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 21, c: 21) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 30, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 30, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 30, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 30, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 30, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 30, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 30, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 31, c: 28) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 31, c: 28) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 33, c: 10) - mutation from True to False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 33, c: 10) - mutation from True to None
+ - /home/ebert/projects/pj/pj/parser.py: (l: 35, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 35, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 35, c: 11) - mutation from <class 'ast.Is'> to <class 'ast.IsNot'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 36, c: 21) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 36, c: 21) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 40, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 40, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 40, c: 11) - mutation from <class 'ast.NotEq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 40, c: 11) - mutation from <class 'ast.NotEq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 40, c: 11) - mutation from <class 'ast.NotEq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 40, c: 11) - mutation from <class 'ast.NotEq'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 40, c: 11) - mutation from <class 'ast.NotEq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 43, c: 35) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 43, c: 35) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 48, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 48, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 48, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 48, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 48, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 48, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 48, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 49, c: 32) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 49, c: 32) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 50, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 50, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 50, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 50, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 50, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 50, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 50, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 53, c: 17) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 53, c: 17) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 57, c: 26) - mutation from False to True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 57, c: 26) - mutation from False to None
+ - /home/ebert/projects/pj/pj/parser.py: (l: 60, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 60, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 60, c: 7) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 60, c: 19) - mutation from <class 'ast.NotEq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 60, c: 19) - mutation from <class 'ast.NotEq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 60, c: 19) - mutation from <class 'ast.NotEq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 60, c: 19) - mutation from <class 'ast.NotEq'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 60, c: 19) - mutation from <class 'ast.NotEq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 63, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 63, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 63, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 63, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 63, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 63, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 63, c: 7) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 64, c: 27) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 64, c: 27) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 65, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/parser.py: (l: 65, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/parser.py: (l: 65, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 65, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 65, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 65, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 65, c: 9) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/parser.py: (l: 66, c: 28) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 66, c: 28) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pj/pj/parser.py: (l: 68, c: 18) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pj/pj/parser.py: (l: 68, c: 18) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+
+test_null_amp_str_dbl_0_call_dup_0_str_hlf_0
+--------------------------------------------
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 68, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 68, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.Gt'>
+
+NOT KILLED
+----------
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 22, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 46, c: 4) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 46, c: 4) - mutation from If_Statement to If_False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 46, c: 7) - mutation from <class 'ast.In'> to <class 'ast.NotIn'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 55, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 55, c: 7) - mutation from <class 'ast.GtE'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 58, c: 9) - mutation from <class 'ast.GtE'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 58, c: 9) - mutation from <class 'ast.GtE'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 70, c: 15) - mutation from True to False
+ - /home/ebert/projects/pj/pj/lexer.py: (l: 104, c: 8) - mutation from If_Statement to If_True

@@ -1,0 +1,191 @@
+
+______________SUMMARY______________
+____DictTests___
+Amplified methods added: 2
+Collapsed time: 1:02:03.974623
+Original Mutation Score: 84.06 %
+Amplified Mutation Score: 86.96 %
+Improved Mutation Score: 2.90 %
+Killed Mutants Originally: 58
+Killed Mutants Amplified: 60
+Mutants Alive Amplified: 9
+Newly Killed Mutants Amplified: 2
+Relative Increase in Killed Mutants: 3.45 %
+____ChildDictTests___
+Amplified methods added: 2
+Collapsed time: 1:02:03.974623
+Original Mutation Score: 84.06 %
+Amplified Mutation Score: 86.96 %
+Improved Mutation Score: 2.90 %
+Killed Mutants Originally: 58
+Killed Mutants Amplified: 60
+Mutants Alive Amplified: 9
+Newly Killed Mutants Amplified: 2
+Relative Increase in Killed Mutants: 3.45 %
+
+______________DETAILS______________
+____DictTests___
+
+
+original
+--------
+ - /home/ebert/projects/addict/addict/addict.py: (l: 7, c: 70) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 7, c: 70) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 9, c: 47) - mutation from False to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 11, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 13, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 13, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 16, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 16, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 16, c: 17) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 26, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 26, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 33, c: 20) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 35, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 35, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 35, c: 11) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 35, c: 24) - mutation from <class 'ast.NotIn'> to <class 'ast.In'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 42, c: 16) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 42, c: 16) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 11) - mutation from <class 'ast.IsNot'> to <class 'ast.Is'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 20) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 20) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 50, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 50, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 60, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 60, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 62, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 62, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 70, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 70, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 80, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 82, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 82, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 105, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 105, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.Eq'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.LtE'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.Lt'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.GtE'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 111, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 111, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 111, c: 16) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 111, c: 17) - mutation from <class 'ast.NotIn'> to <class 'ast.In'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 128, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 128, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 135, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 135, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 146, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 146, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 146, c: 11) - mutation from <class 'ast.In'> to <class 'ast.NotIn'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 152, c: 34) - mutation from True to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 152, c: 34) - mutation from True to None
+ - /home/ebert/projects/addict/addict/addict.py: (l: 155, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 155, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 159, c: 20) - mutation from False to True
+
+test_init_raises_amp_numb_div_0_numb_div_0_numb_div_0
+-----------------------------------------------------
+ - /home/ebert/projects/addict/addict/addict.py: (l: 11, c: 12) - mutation from If_Statement to If_False
+
+test_to_dict_amp_str_hlf_1_str_hlf_2
+------------------------------------
+ - /home/ebert/projects/addict/addict/addict.py: (l: 80, c: 12) - mutation from If_Statement to If_False
+
+NOT KILLED
+----------
+ - /home/ebert/projects/addict/addict/addict.py: (l: 8, c: 64) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 8, c: 64) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 9, c: 47) - mutation from False to None
+ - /home/ebert/projects/addict/addict/addict.py: (l: 43, c: 18) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 43, c: 18) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 145, c: 38) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 145, c: 38) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 159, c: 20) - mutation from False to None____ChildDictTests___
+
+
+original
+--------
+ - /home/ebert/projects/addict/addict/addict.py: (l: 7, c: 70) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 7, c: 70) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 9, c: 47) - mutation from False to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 11, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 13, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 13, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 16, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 16, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 16, c: 17) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 26, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 26, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 33, c: 20) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 35, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 35, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 35, c: 11) - mutation from <class 'ast.And'> to <class 'ast.Or'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 35, c: 24) - mutation from <class 'ast.NotIn'> to <class 'ast.In'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 42, c: 16) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 42, c: 16) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 11) - mutation from <class 'ast.IsNot'> to <class 'ast.Is'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 20) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 44, c: 20) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 50, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 50, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 60, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 60, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 62, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 62, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 70, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 70, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 80, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 82, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 82, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 105, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 105, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.Eq'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.LtE'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.Lt'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.GtE'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 111, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 111, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 111, c: 16) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 111, c: 17) - mutation from <class 'ast.NotIn'> to <class 'ast.In'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 128, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 128, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 135, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 135, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 146, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 146, c: 8) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 146, c: 11) - mutation from <class 'ast.In'> to <class 'ast.NotIn'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 152, c: 34) - mutation from True to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 152, c: 34) - mutation from True to None
+ - /home/ebert/projects/addict/addict/addict.py: (l: 155, c: 12) - mutation from If_Statement to If_True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 155, c: 12) - mutation from If_Statement to If_False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 159, c: 20) - mutation from False to True
+
+test_init_raises_amp_numb_div_0_numb_div_0_numb_div_0
+-----------------------------------------------------
+ - /home/ebert/projects/addict/addict/addict.py: (l: 11, c: 12) - mutation from If_Statement to If_False
+
+test_to_dict_amp_numb_mult_2_str_hlf_1_str_hlf_2
+------------------------------------------------
+ - /home/ebert/projects/addict/addict/addict.py: (l: 80, c: 12) - mutation from If_Statement to If_False
+
+NOT KILLED
+----------
+ - /home/ebert/projects/addict/addict/addict.py: (l: 8, c: 64) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 8, c: 64) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 9, c: 47) - mutation from False to None
+ - /home/ebert/projects/addict/addict/addict.py: (l: 43, c: 18) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 43, c: 18) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 106, c: 15) - mutation from <class 'ast.Gt'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/addict/addict/addict.py: (l: 145, c: 38) - mutation from None to False
+ - /home/ebert/projects/addict/addict/addict.py: (l: 145, c: 38) - mutation from None to True
+ - /home/ebert/projects/addict/addict/addict.py: (l: 159, c: 20) - mutation from False to None

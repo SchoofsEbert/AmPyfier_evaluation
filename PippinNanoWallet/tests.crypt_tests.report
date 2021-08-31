@@ -1,0 +1,106 @@
+
+______________SUMMARY______________
+____TestAESCrypt___
+Amplified methods added: 4
+Collapsed time: 0:09:07.802915
+Original Mutation Score: 91.43 %
+Amplified Mutation Score: 98.57 %
+Improved Mutation Score: 7.14 %
+Killed Mutants Originally: 64
+Killed Mutants Amplified: 69
+Alive Mutants Amplified: 1
+Newly Killed Mutants Amplified: 5
+Relative Increase in Killed Mutants: 7.81 %
+
+______________DETAILS______________
+
+____TestAESCrypt___
+
+
+original
+--------
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 26) - mutation from <class 'ast.Add'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 26) - mutation from <class 'ast.Add'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 26) - mutation from <class 'ast.Add'> to <class 'ast.Sub'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 26) - mutation from <class 'ast.Add'> to <class 'ast.Div'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 26) - mutation from <class 'ast.Add'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 26) - mutation from <class 'ast.Add'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 30) - mutation from <class 'ast.Mult'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 30) - mutation from <class 'ast.Mult'> to <class 'ast.Sub'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 30) - mutation from <class 'ast.Mult'> to <class 'ast.Div'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 30) - mutation from <class 'ast.Mult'> to <class 'ast.Add'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 30) - mutation from <class 'ast.Mult'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 30) - mutation from <class 'ast.Mult'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 31) - mutation from <class 'ast.Sub'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 31) - mutation from <class 'ast.Sub'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 31) - mutation from <class 'ast.Sub'> to <class 'ast.Div'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 31) - mutation from <class 'ast.Sub'> to <class 'ast.Add'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 31) - mutation from <class 'ast.Sub'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 31) - mutation from <class 'ast.Sub'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 41) - mutation from <class 'ast.Mod'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 41) - mutation from <class 'ast.Mod'> to <class 'ast.Sub'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 41) - mutation from <class 'ast.Mod'> to <class 'ast.Div'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 41) - mutation from <class 'ast.Mod'> to <class 'ast.Add'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 41) - mutation from <class 'ast.Mod'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 41) - mutation from <class 'ast.Mod'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 65) - mutation from <class 'ast.Sub'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 65) - mutation from <class 'ast.Sub'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 65) - mutation from <class 'ast.Sub'> to <class 'ast.Div'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 65) - mutation from <class 'ast.Sub'> to <class 'ast.Add'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 65) - mutation from <class 'ast.Sub'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 65) - mutation from <class 'ast.Sub'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 75) - mutation from <class 'ast.Mod'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 75) - mutation from <class 'ast.Mod'> to <class 'ast.Sub'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 75) - mutation from <class 'ast.Mod'> to <class 'ast.Div'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 75) - mutation from <class 'ast.Mod'> to <class 'ast.Add'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 75) - mutation from <class 'ast.Mod'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 14, c: 75) - mutation from <class 'ast.Mod'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 18, c: 16) - mutation from <class 'ast.Add'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 18, c: 16) - mutation from <class 'ast.Add'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 18, c: 16) - mutation from <class 'ast.Add'> to <class 'ast.Sub'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 18, c: 16) - mutation from <class 'ast.Add'> to <class 'ast.Div'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 18, c: 16) - mutation from <class 'ast.Add'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 18, c: 16) - mutation from <class 'ast.Add'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 22, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Mult'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 22, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Mod'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 22, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Sub'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 22, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Div'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 22, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.Pow'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 22, c: 32) - mutation from <class 'ast.Add'> to <class 'ast.FloorDiv'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 26, c: 13) - mutation from Slice_UnboundLower to Slice_UnboundUpper
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 26, c: 13) - mutation from Slice_UnboundLower to Slice_Unbounded
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 28, c: 46) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 28, c: 46) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 30, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 30, c: 11) - mutation from <class 'ast.Lt'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 30, c: 11) - mutation from <class 'ast.Lt'> to <class 'ast.NotEq'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 30, c: 11) - mutation from <class 'ast.Lt'> to <class 'ast.Gt'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 32, c: 8) - mutation from If_Statement to If_True
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 32, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.GtE'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 32, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 32, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.LtE'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 32, c: 13) - mutation from Slice_UnboundLower to Slice_UnboundUpper
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 32, c: 13) - mutation from Slice_UnboundLower to Slice_Unbounded
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 34, c: 15) - mutation from Slice_UnboundUpper to Slice_Unbounded
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 34, c: 15) - mutation from Slice_UnboundUpper to Slice_UnboundLower
+
+test_encrypt_decrypt_amp_str_hlf_0_call_rem_0_call_rem_0
+--------------------------------------------------------
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 32, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.Lt'>
+
+test_encrypt_decrypt_amp_call_rem_0_str_hlf_0_str_hlf_1
+-------------------------------------------------------
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 32, c: 13) - mutation from <class 'ast.NotEq'> to <class 'ast.Gt'>
+
+test_encrypt_decrypt_amp_str_dbl_1_call_rem_0_call_rem_0
+--------------------------------------------------------
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 32, c: 8) - mutation from If_Statement to If_False
+
+test_encrypt_decrypt_amp_str_emp_1_call_rem_0
+---------------------------------------------
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 30, c: 11) - mutation from <class 'ast.Lt'> to <class 'ast.Eq'>
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 30, c: 11) - mutation from <class 'ast.Lt'> to <class 'ast.LtE'>
+
+NOT KILLED
+----------
+ - /home/ebert/projects/pippin_nano_wallet/pippin/util/crypt.py: (l: 30, c: 8) - mutation from If_Statement to If_False
