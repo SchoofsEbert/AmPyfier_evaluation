@@ -16,7 +16,7 @@ class TestMIDIFile(unittest.TestCase):
     def test_create(self):
         notes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
         path = 'tmp'
-        os.makedirs(path)
+        os.makedirs(path, exist_ok=True)
         os.chdir(path)
         m = MIDIFile(filename='test.mid')
         m.create(notes)
