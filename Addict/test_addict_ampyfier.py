@@ -517,25 +517,25 @@ class DictTests(unittest.TestCase):
         d.newKey = TEST_VAL
         self.assertEqual(d.newKey, TEST_VAL)
 
-    def test_init_raises_amp_numb_div_0_numb_div_0_numb_div_0(self):
+    def test_init_raises_none_1(self):
 
         def init():
-            self.dict_class(0)
+            self.dict_class(5)
 
         def init2():
-            Dict('a')
-        init()
-        with self.assertRaises(ValueError):
-            init2()
+            Dict(None)
+        init2()
 
-    def test_to_dict_amp_str_hlf_1_str_hlf_2(self):
+    def test_to_dict_str_hlf_1_str_hlf_2(self):
         nested = {'a': [{'a': 0}, 2], '': {}, 'c': 2}
         prop = self.dict_class(nested)
         regular = prop.to_dict()
         self.assertEqual(regular, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
         self.assertEqual(regular, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
-        self.assertEqual(nested, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
+        self.assertEqual(prop, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
         self.assertEqual(regular, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
+        self.assertEqual(nested, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
+        self.assertIsInstance(regular, dict)
 
         def get_attr():
             regular.a = 2
@@ -1049,32 +1049,32 @@ class ChildDictTests(unittest.TestCase):
         d.newKey = TEST_VAL
         self.assertEqual(d.newKey, TEST_VAL)
 
-    def test_init_raises_amp_numb_div_0_numb_div_0_numb_div_0(self):
+    def test_init_raises_none_1(self):
 
         def init():
-            self.dict_class(0)
+            self.dict_class(5)
 
         def init2():
-            Dict('a')
-        init()
-        with self.assertRaises(ValueError):
-            init2()
+            Dict(None)
+        init2()
 
-    def test_to_dict_amp_numb_mult_2_str_hlf_1_str_hlf_2(self):
-        nested = {'a': [{'a': 0}, 2], '': {}, 'c': 2}
+    def test_to_dict_none_1_none_6(self):
+        nested = {'a': [{'a': 0}, 2], None: {}, 'c': 2}
         prop = self.dict_class(nested)
         regular = prop.to_dict()
-        self.assertEqual(regular, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
-        self.assertEqual(regular, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
-        self.assertEqual(nested, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
-        self.assertEqual(regular, {'a': [{'a': 0}, 2], '': {}, 'c': 2})
+        self.assertEqual(regular, {'a': [{'a': 0}, 2], None: {}, 'c': 2})
+        self.assertEqual(regular, {'a': [{'a': 0}, 2], None: {}, 'c': 2})
+        self.assertEqual(prop, {'a': [{'a': 0}, 2], None: {}, 'c': 2})
+        self.assertEqual(regular, {'a': [{'a': 0}, 2], None: {}, 'c': 2})
+        self.assertEqual(nested, {'a': [{'a': 0}, 2], None: {}, 'c': 2})
+        self.assertIsInstance(regular, dict)
 
         def get_attr():
-            regular.a = 4
+            regular.a = 2
         with self.assertRaises(AttributeError):
             get_attr()
 
         def get_attr_deep():
-            regular[''][0].a = 1
+            regular[None][0].a = 1
         with self.assertRaises(KeyError):
             get_attr_deep()

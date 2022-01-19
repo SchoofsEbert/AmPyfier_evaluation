@@ -16,9 +16,10 @@ class CHILD_CLASS(Dict):
 TEST_VAL = [1, 2, 3]
 TEST_DICT = {'a': {'b': {'c': TEST_VAL}}}
 
+
 class DictTests(unittest.TestCase):
     dict_class = Dict
-
+    
     def test_set_one_level_item(self):
         some_dict = {'a': TEST_VAL}
         prop = self.dict_class()
@@ -80,7 +81,6 @@ class DictTests(unittest.TestCase):
 
         def init2():
             Dict('a')
-
         self.assertRaises(TypeError, init)
         self.assertRaises(ValueError, init2)
 
@@ -203,12 +203,10 @@ class DictTests(unittest.TestCase):
 
         def get_attr():
             regular.a = 2
-
         self.assertRaises(AttributeError, get_attr)
 
         def get_attr_deep():
             regular['a'][0].a = 1
-
         self.assertRaises(AttributeError, get_attr_deep)
 
     def test_to_dict_with_tuple(self):
@@ -267,10 +265,9 @@ class DictTests(unittest.TestCase):
     def test_update_with_multiple_args(self):
         def update():
             org.update({'a': 2}, {'a': 1})
-
         org = self.dict_class()
         self.assertRaises(TypeError, update)
-
+        
     def test_ior_operator(self):
         old = self.dict_class()
         old.child.a = 'a'
@@ -340,7 +337,7 @@ class DictTests(unittest.TestCase):
         org = org | someother
         self.assertDictEqual(org, correct)
         self.assertIsInstance(org.b[0], dict)
-
+    
     def test_ror_operator(self):
         org = dict()
         org['a'] = [1, 2, {'a': 'superman'}]
@@ -355,7 +352,7 @@ class DictTests(unittest.TestCase):
         self.assertDictEqual(org, correct)
         self.assertIsInstance(org, Dict)
         self.assertIsInstance(org.b[0], dict)
-
+  
     def test_or_operator_type_error(self):
         old = self.dict_class()
         with self.assertRaises(TypeError):
@@ -448,6 +445,7 @@ class DictTests(unittest.TestCase):
         # changing child of b should not affect a
         b.child = "new stuff"
         self.assertTrue(isinstance(a.child, self.dict_class))
+
 
     def test_add_on_empty_dict(self):
         d = self.dict_class()
@@ -553,8 +551,8 @@ class DictTests(unittest.TestCase):
         self.assertEqual(d.missing, {})
         d.inner.freeze()
         with self.assertRaises(KeyError):
-            d.inner.missing  # d.inner is frozen
-        self.assertEqual(d.missing, {})  # but not `d` itself
+            d.inner.missing             # d.inner is frozen
+        self.assertEqual(d.missing, {}) # but not `d` itself
         d.inner.unfreeze()
         self.assertEqual(d.inner.missing, {})
 
@@ -562,10 +560,10 @@ class DictTests(unittest.TestCase):
         "Test that d.freeze() disallows adding new keys in d."
         d = self.dict_class({"oldKey": None})
         d.freeze()
-        d.oldKey = TEST_VAL  # Can set pre-existing key.
+        d.oldKey = TEST_VAL         # Can set pre-existing key.
         self.assertEqual(d.oldKey, TEST_VAL)
         with self.assertRaises(KeyError):
-            d.newKey = TEST_VAL  # But can't add a new key.
+            d.newKey = TEST_VAL     # But can't add a new key.
         self.assertNotIn("newKey", d)
         d.unfreeze()
         d.newKey = TEST_VAL
@@ -574,7 +572,7 @@ class DictTests(unittest.TestCase):
 
 class ChildDictTests(unittest.TestCase):
     dict_class = CHILD_CLASS
-
+    
     def test_set_one_level_item(self):
         some_dict = {'a': TEST_VAL}
         prop = self.dict_class()
@@ -636,7 +634,6 @@ class ChildDictTests(unittest.TestCase):
 
         def init2():
             Dict('a')
-
         self.assertRaises(TypeError, init)
         self.assertRaises(ValueError, init2)
 
@@ -759,12 +756,10 @@ class ChildDictTests(unittest.TestCase):
 
         def get_attr():
             regular.a = 2
-
         self.assertRaises(AttributeError, get_attr)
 
         def get_attr_deep():
             regular['a'][0].a = 1
-
         self.assertRaises(AttributeError, get_attr_deep)
 
     def test_to_dict_with_tuple(self):
@@ -823,10 +818,9 @@ class ChildDictTests(unittest.TestCase):
     def test_update_with_multiple_args(self):
         def update():
             org.update({'a': 2}, {'a': 1})
-
         org = self.dict_class()
         self.assertRaises(TypeError, update)
-
+        
     def test_ior_operator(self):
         old = self.dict_class()
         old.child.a = 'a'
@@ -896,7 +890,7 @@ class ChildDictTests(unittest.TestCase):
         org = org | someother
         self.assertDictEqual(org, correct)
         self.assertIsInstance(org.b[0], dict)
-
+    
     def test_ror_operator(self):
         org = dict()
         org['a'] = [1, 2, {'a': 'superman'}]
@@ -911,7 +905,7 @@ class ChildDictTests(unittest.TestCase):
         self.assertDictEqual(org, correct)
         self.assertIsInstance(org, Dict)
         self.assertIsInstance(org.b[0], dict)
-
+  
     def test_or_operator_type_error(self):
         old = self.dict_class()
         with self.assertRaises(TypeError):
@@ -1109,8 +1103,8 @@ class ChildDictTests(unittest.TestCase):
         self.assertEqual(d.missing, {})
         d.inner.freeze()
         with self.assertRaises(KeyError):
-            d.inner.missing  # d.inner is frozen
-        self.assertEqual(d.missing, {})  # but not `d` itself
+            d.inner.missing             # d.inner is frozen
+        self.assertEqual(d.missing, {}) # but not `d` itself
         d.inner.unfreeze()
         self.assertEqual(d.inner.missing, {})
 
@@ -1118,10 +1112,10 @@ class ChildDictTests(unittest.TestCase):
         "Test that d.freeze() disallows adding new keys in d."
         d = self.dict_class({"oldKey": None})
         d.freeze()
-        d.oldKey = TEST_VAL  # Can set pre-existing key.
+        d.oldKey = TEST_VAL         # Can set pre-existing key.
         self.assertEqual(d.oldKey, TEST_VAL)
         with self.assertRaises(KeyError):
-            d.newKey = TEST_VAL  # But can't add a new key.
+            d.newKey = TEST_VAL     # But can't add a new key.
         self.assertNotIn("newKey", d)
         d.unfreeze()
         d.newKey = TEST_VAL
