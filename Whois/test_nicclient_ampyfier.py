@@ -1,0 +1,370 @@
+from __future__ import unicode_literals
+from __future__ import print_function
+from __future__ import division
+from __future__ import absolute_import
+from future import standard_library
+standard_library.install_aliases()
+from builtins import *
+import unittest
+from whois.whois import NICClient
+
+
+class TestNICClient(unittest.TestCase):
+
+    def setUp(self):
+        self.client = NICClient()
+
+    def test_choose_server(self):
+        domain = 'рнидс.срб'
+        chosen = self.client.choose_server(domain)
+        suffix = domain.split('.')[-1].encode('idna').decode('utf-8')
+        correct = '{}.whois-servers.net'.format(suffix)
+        self.assertEqual(chosen, correct)
+
+    def test_choose_server_amp(self):
+        domain = 'рнидс.срб'
+        chosen = self.client.choose_server(domain)
+        self.assertEqual(chosen, 'xn--90a3ac.whois-servers.net')
+        self.assertEqual(self.client.ABUSEHOST, 'whois.abuse.net')
+        self.assertEqual(self.client.AI_HOST, 'whois.nic.ai')
+        self.assertEqual(self.client.ANICHOST, 'whois.arin.net')
+        self.assertEqual(self.client.APP_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.AR_HOST, 'whois.nic.ar')
+        self.assertEqual(self.client.BNICHOST, 'whois.registro.br')
+        self.assertEqual(self.client.BY_HOST, 'whois.cctld.by')
+        self.assertEqual(self.client.CA_HOST, 'whois.ca.fury.ca')
+        self.assertEqual(self.client.CHAT_HOST, 'whois.nic.chat')
+        self.assertEqual(self.client.CL_HOST, 'whois.nic.cl')
+        self.assertEqual(self.client.CR_HOST, 'whois.nic.cr')
+        self.assertEqual(self.client.DEFAULT_PORT, 'nicname')
+        self.assertEqual(self.client.DENICHOST, 'whois.denic.de')
+        self.assertEqual(self.client.DEV_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.DE_HOST, 'whois.denic.de')
+        self.assertEqual(self.client.DK_HOST, 'whois.dk-hostmaster.dk')
+        self.assertEqual(self.client.DNICHOST, 'whois.nic.mil')
+        self.assertEqual(self.client.DO_HOST, 'whois.nic.do')
+        self.assertEqual(self.client.GAMES_HOST, 'whois.nic.games')
+        self.assertEqual(self.client.GNICHOST, 'whois.nic.gov')
+        self.assertEqual(self.client.HK_HOST, 'whois.hkirc.hk')
+        self.assertEqual(self.client.HN_HOST, 'whois.nic.hn')
+        self.assertEqual(self.client.HR_HOST, 'whois.dns.hr')
+        self.assertEqual(self.client.IANAHOST, 'whois.iana.org')
+        self.assertEqual(self.client.INICHOST, 'whois.networksolutions.com')
+        self.assertEqual(self.client.IST_HOST, 'whois.afilias-srs.net')
+        self.assertEqual(self.client.JOBS_HOST, 'whois.nic.jobs')
+        self.assertEqual(self.client.KZ_HOST, 'whois.nic.kz')
+        self.assertEqual(self.client.LAT_HOST, 'whois.nic.lat')
+        self.assertEqual(self.client.LI_HOST, 'whois.nic.li')
+        self.assertEqual(self.client.LNICHOST, 'whois.lacnic.net')
+        self.assertEqual(self.client.MARKET_HOST, 'whois.nic.market')
+        self.assertEqual(self.client.MNICHOST, 'whois.ra.net')
+        self.assertEqual(self.client.MONEY_HOST, 'whois.nic.money')
+        self.assertEqual(self.client.MX_HOST, 'whois.mx')
+        self.assertEqual(self.client.NICHOST, 'whois.crsnic.net')
+        self.assertEqual(self.client.NL_HOST, 'whois.domain-registry.nl')
+        self.assertEqual(self.client.NORIDHOST, 'whois.norid.no')
+        self.assertEqual(self.client.ONLINE_HOST, 'whois.nic.online')
+        self.assertEqual(self.client.OOO_HOST, 'whois.nic.ooo')
+        self.assertEqual(self.client.PAGE_HOST, 'whois.nic.page')
+        self.assertEqual(self.client.PANDIHOST, 'whois.pandi.or.id')
+        self.assertEqual(self.client.PE_HOST, 'kero.yachay.pe')
+        self.assertEqual(self.client.PNICHOST, 'whois.apnic.net')
+        self.assertEqual(self.client.QNICHOST_TAIL, '.whois-servers.net')
+        self.assertEqual(self.client.RNICHOST, 'whois.ripe.net')
+        self.assertEqual(self.client.SNICHOST, 'whois.6bone.net')
+        self.assertEqual(self.client.WEBSITE_HOST, 'whois.nic.website')
+        self.assertEqual(self.client.WHOIS_QUICK, 2)
+        self.assertEqual(self.client.WHOIS_RECURSE, 1)
+        self.assertEqual(self.client.ip_whois, ['whois.lacnic.net',
+            'whois.ripe.net', 'whois.apnic.net', 'whois.registro.br',
+            'whois.pandi.or.id'])
+        self.assertFalse(self.client.use_qnichost)
+        suffix = domain.split('.')[-1].encode('idna').decode('utf-8')
+        correct = '{}.whois-servers.net'.format(suffix)
+        self.assertEqual(chosen, 'xn--90a3ac.whois-servers.net')
+        self.assertEqual(correct, 'xn--90a3ac.whois-servers.net')
+
+    def test_choose_server_none_0(self):
+        domain = None
+        with self.assertRaises(AttributeError):
+            chosen = self.client.choose_server(domain)
+        with self.assertRaises(AttributeError):
+            suffix = domain.split('.')[-1].encode('idna').decode('utf-8')
+
+    def test_choose_server_str_emp_0(self):
+        domain = ''
+        chosen = self.client.choose_server(domain)
+        self.assertEqual(self.client.ABUSEHOST, 'whois.abuse.net')
+        self.assertEqual(self.client.AI_HOST, 'whois.nic.ai')
+        self.assertEqual(self.client.ANICHOST, 'whois.arin.net')
+        self.assertEqual(self.client.APP_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.AR_HOST, 'whois.nic.ar')
+        self.assertEqual(self.client.BNICHOST, 'whois.registro.br')
+        self.assertEqual(self.client.BY_HOST, 'whois.cctld.by')
+        self.assertEqual(self.client.CA_HOST, 'whois.ca.fury.ca')
+        self.assertEqual(self.client.CHAT_HOST, 'whois.nic.chat')
+        self.assertEqual(self.client.CL_HOST, 'whois.nic.cl')
+        self.assertEqual(self.client.CR_HOST, 'whois.nic.cr')
+        self.assertEqual(self.client.DEFAULT_PORT, 'nicname')
+        self.assertEqual(self.client.DENICHOST, 'whois.denic.de')
+        self.assertEqual(self.client.DEV_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.DE_HOST, 'whois.denic.de')
+        self.assertEqual(self.client.DK_HOST, 'whois.dk-hostmaster.dk')
+        self.assertEqual(self.client.DNICHOST, 'whois.nic.mil')
+        self.assertEqual(self.client.DO_HOST, 'whois.nic.do')
+        self.assertEqual(self.client.GAMES_HOST, 'whois.nic.games')
+        self.assertEqual(self.client.GNICHOST, 'whois.nic.gov')
+        self.assertEqual(self.client.HK_HOST, 'whois.hkirc.hk')
+        self.assertEqual(self.client.HN_HOST, 'whois.nic.hn')
+        self.assertEqual(self.client.HR_HOST, 'whois.dns.hr')
+        self.assertEqual(self.client.IANAHOST, 'whois.iana.org')
+        self.assertEqual(self.client.INICHOST, 'whois.networksolutions.com')
+        self.assertEqual(self.client.IST_HOST, 'whois.afilias-srs.net')
+        self.assertEqual(self.client.JOBS_HOST, 'whois.nic.jobs')
+        self.assertEqual(self.client.KZ_HOST, 'whois.nic.kz')
+        self.assertEqual(self.client.LAT_HOST, 'whois.nic.lat')
+        self.assertEqual(self.client.LI_HOST, 'whois.nic.li')
+        self.assertEqual(self.client.LNICHOST, 'whois.lacnic.net')
+        self.assertEqual(self.client.MARKET_HOST, 'whois.nic.market')
+        self.assertEqual(self.client.MNICHOST, 'whois.ra.net')
+        self.assertEqual(self.client.MONEY_HOST, 'whois.nic.money')
+        self.assertEqual(self.client.MX_HOST, 'whois.mx')
+        self.assertEqual(self.client.NICHOST, 'whois.crsnic.net')
+        self.assertEqual(self.client.NL_HOST, 'whois.domain-registry.nl')
+        self.assertEqual(self.client.NORIDHOST, 'whois.norid.no')
+        self.assertEqual(self.client.ONLINE_HOST, 'whois.nic.online')
+        self.assertEqual(self.client.OOO_HOST, 'whois.nic.ooo')
+        self.assertEqual(self.client.PAGE_HOST, 'whois.nic.page')
+        self.assertEqual(self.client.PANDIHOST, 'whois.pandi.or.id')
+        self.assertEqual(self.client.PE_HOST, 'kero.yachay.pe')
+        self.assertEqual(self.client.PNICHOST, 'whois.apnic.net')
+        self.assertEqual(self.client.QNICHOST_TAIL, '.whois-servers.net')
+        self.assertEqual(self.client.RNICHOST, 'whois.ripe.net')
+        self.assertEqual(self.client.SNICHOST, 'whois.6bone.net')
+        self.assertEqual(self.client.WEBSITE_HOST, 'whois.nic.website')
+        self.assertEqual(self.client.WHOIS_QUICK, 2)
+        self.assertEqual(self.client.WHOIS_RECURSE, 1)
+        self.assertEqual(self.client.ip_whois, ['whois.lacnic.net',
+            'whois.ripe.net', 'whois.apnic.net', 'whois.registro.br',
+            'whois.pandi.or.id'])
+        self.assertFalse(self.client.use_qnichost)
+        suffix = domain.split('.')[-1].encode('idna').decode('utf-8')
+        correct = '{}.whois-servers.net'.format(suffix)
+        self.assertEqual(correct, '.whois-servers.net')
+
+    def test_choose_server_str_uni_0_str_hlf_0(self):
+        domain = """	GLm2v'SWT;v6,
+rtAwb%;[jQusw
+y5sFf;Df.ehI\\5n(O
+e;E*vl_,#-BXLIC,hO*]Slu	c$;
+O:"""
+        chosen = self.client.choose_server(domain)
+        self.assertEqual(chosen,
+            'ehI\\5n(O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:.whois-servers.net')
+        self.assertEqual(self.client.ABUSEHOST, 'whois.abuse.net')
+        self.assertEqual(self.client.AI_HOST, 'whois.nic.ai')
+        self.assertEqual(self.client.ANICHOST, 'whois.arin.net')
+        self.assertEqual(self.client.APP_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.AR_HOST, 'whois.nic.ar')
+        self.assertEqual(self.client.BNICHOST, 'whois.registro.br')
+        self.assertEqual(self.client.BY_HOST, 'whois.cctld.by')
+        self.assertEqual(self.client.CA_HOST, 'whois.ca.fury.ca')
+        self.assertEqual(self.client.CHAT_HOST, 'whois.nic.chat')
+        self.assertEqual(self.client.CL_HOST, 'whois.nic.cl')
+        self.assertEqual(self.client.CR_HOST, 'whois.nic.cr')
+        self.assertEqual(self.client.DEFAULT_PORT, 'nicname')
+        self.assertEqual(self.client.DENICHOST, 'whois.denic.de')
+        self.assertEqual(self.client.DEV_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.DE_HOST, 'whois.denic.de')
+        self.assertEqual(self.client.DK_HOST, 'whois.dk-hostmaster.dk')
+        self.assertEqual(self.client.DNICHOST, 'whois.nic.mil')
+        self.assertEqual(self.client.DO_HOST, 'whois.nic.do')
+        self.assertEqual(self.client.GAMES_HOST, 'whois.nic.games')
+        self.assertEqual(self.client.GNICHOST, 'whois.nic.gov')
+        self.assertEqual(self.client.HK_HOST, 'whois.hkirc.hk')
+        self.assertEqual(self.client.HN_HOST, 'whois.nic.hn')
+        self.assertEqual(self.client.HR_HOST, 'whois.dns.hr')
+        self.assertEqual(self.client.IANAHOST, 'whois.iana.org')
+        self.assertEqual(self.client.INICHOST, 'whois.networksolutions.com')
+        self.assertEqual(self.client.IST_HOST, 'whois.afilias-srs.net')
+        self.assertEqual(self.client.JOBS_HOST, 'whois.nic.jobs')
+        self.assertEqual(self.client.KZ_HOST, 'whois.nic.kz')
+        self.assertEqual(self.client.LAT_HOST, 'whois.nic.lat')
+        self.assertEqual(self.client.LI_HOST, 'whois.nic.li')
+        self.assertEqual(self.client.LNICHOST, 'whois.lacnic.net')
+        self.assertEqual(self.client.MARKET_HOST, 'whois.nic.market')
+        self.assertEqual(self.client.MNICHOST, 'whois.ra.net')
+        self.assertEqual(self.client.MONEY_HOST, 'whois.nic.money')
+        self.assertEqual(self.client.MX_HOST, 'whois.mx')
+        self.assertEqual(self.client.NICHOST, 'whois.crsnic.net')
+        self.assertEqual(self.client.NL_HOST, 'whois.domain-registry.nl')
+        self.assertEqual(self.client.NORIDHOST, 'whois.norid.no')
+        self.assertEqual(self.client.ONLINE_HOST, 'whois.nic.online')
+        self.assertEqual(self.client.OOO_HOST, 'whois.nic.ooo')
+        self.assertEqual(self.client.PAGE_HOST, 'whois.nic.page')
+        self.assertEqual(self.client.PANDIHOST, 'whois.pandi.or.id')
+        self.assertEqual(self.client.PE_HOST, 'kero.yachay.pe')
+        self.assertEqual(self.client.PNICHOST, 'whois.apnic.net')
+        self.assertEqual(self.client.QNICHOST_TAIL, '.whois-servers.net')
+        self.assertEqual(self.client.RNICHOST, 'whois.ripe.net')
+        self.assertEqual(self.client.SNICHOST, 'whois.6bone.net')
+        self.assertEqual(self.client.WEBSITE_HOST, 'whois.nic.website')
+        self.assertEqual(self.client.WHOIS_QUICK, 2)
+        self.assertEqual(self.client.WHOIS_RECURSE, 1)
+        self.assertEqual(self.client.ip_whois, ['whois.lacnic.net',
+            'whois.ripe.net', 'whois.apnic.net', 'whois.registro.br',
+            'whois.pandi.or.id'])
+        self.assertFalse(self.client.use_qnichost)
+        with self.assertRaises(LookupError):
+            suffix = domain.split(
+                "$-o>7K\n\\$Q#w,i59xF~#Fiei=Dybr\tGLm2v'SWT;v6,\nrtAwb%;[jQusw\ny5sFf;Df.ehI\\5n(O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:>>)h.ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE^^Rq"
+                )[-1].encode(
+                "$-o>7K\n\\$Q#w,i59xF~#Fiei=Dybr\tGLm2v'SWT;v6,\nrtAwb%;[jQusw\ny5sFf;Df.ehI\\5n(O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:>>)h.ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE^^Rq"
+                ).decode(
+                "$-o>7K\n\\$Q#w,i59xF~#Fiei=Dybr\tGLm2v'SWT;v6,\nrtAwb%;[jQusw\ny5sFf;Df.ehI\\5n(O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:>>)h.ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE^^Rq"
+                )
+        self.assertEqual(chosen,
+            'ehI\\5n(O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:.whois-servers.net')
+
+    def test_choose_server_str_hlf_0_str_hlf_0(self):
+        domain = 'с.'
+        with self.assertRaises(IndexError):
+            chosen = self.client.choose_server(domain)
+        suffix = domain.split('.')[-1].encode('idna').decode('utf-8')
+        correct = '{}.whois-servers.net'.format(suffix)
+        self.assertEqual(correct, '.whois-servers.net')
+
+    def test_choose_server_str_uni_0_str_dbl_1_str_hlf_0(self):
+        domain = (
+            "O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:>>)h.ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE"
+            )
+        chosen = self.client.choose_server(domain)
+        self.assertEqual(chosen,
+            "ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE.whois-servers.net")
+        self.assertEqual(self.client.ABUSEHOST, 'whois.abuse.net')
+        self.assertEqual(self.client.AI_HOST, 'whois.nic.ai')
+        self.assertEqual(self.client.ANICHOST, 'whois.arin.net')
+        self.assertEqual(self.client.APP_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.AR_HOST, 'whois.nic.ar')
+        self.assertEqual(self.client.BNICHOST, 'whois.registro.br')
+        self.assertEqual(self.client.BY_HOST, 'whois.cctld.by')
+        self.assertEqual(self.client.CA_HOST, 'whois.ca.fury.ca')
+        self.assertEqual(self.client.CHAT_HOST, 'whois.nic.chat')
+        self.assertEqual(self.client.CL_HOST, 'whois.nic.cl')
+        self.assertEqual(self.client.CR_HOST, 'whois.nic.cr')
+        self.assertEqual(self.client.DEFAULT_PORT, 'nicname')
+        self.assertEqual(self.client.DENICHOST, 'whois.denic.de')
+        self.assertEqual(self.client.DEV_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.DE_HOST, 'whois.denic.de')
+        self.assertEqual(self.client.DK_HOST, 'whois.dk-hostmaster.dk')
+        self.assertEqual(self.client.DNICHOST, 'whois.nic.mil')
+        self.assertEqual(self.client.DO_HOST, 'whois.nic.do')
+        self.assertEqual(self.client.GAMES_HOST, 'whois.nic.games')
+        self.assertEqual(self.client.GNICHOST, 'whois.nic.gov')
+        self.assertEqual(self.client.HK_HOST, 'whois.hkirc.hk')
+        self.assertEqual(self.client.HN_HOST, 'whois.nic.hn')
+        self.assertEqual(self.client.HR_HOST, 'whois.dns.hr')
+        self.assertEqual(self.client.IANAHOST, 'whois.iana.org')
+        self.assertEqual(self.client.INICHOST, 'whois.networksolutions.com')
+        self.assertEqual(self.client.IST_HOST, 'whois.afilias-srs.net')
+        self.assertEqual(self.client.JOBS_HOST, 'whois.nic.jobs')
+        self.assertEqual(self.client.KZ_HOST, 'whois.nic.kz')
+        self.assertEqual(self.client.LAT_HOST, 'whois.nic.lat')
+        self.assertEqual(self.client.LI_HOST, 'whois.nic.li')
+        self.assertEqual(self.client.LNICHOST, 'whois.lacnic.net')
+        self.assertEqual(self.client.MARKET_HOST, 'whois.nic.market')
+        self.assertEqual(self.client.MNICHOST, 'whois.ra.net')
+        self.assertEqual(self.client.MONEY_HOST, 'whois.nic.money')
+        self.assertEqual(self.client.MX_HOST, 'whois.mx')
+        self.assertEqual(self.client.NICHOST, 'whois.crsnic.net')
+        self.assertEqual(self.client.NL_HOST, 'whois.domain-registry.nl')
+        self.assertEqual(self.client.NORIDHOST, 'whois.norid.no')
+        self.assertEqual(self.client.ONLINE_HOST, 'whois.nic.online')
+        self.assertEqual(self.client.OOO_HOST, 'whois.nic.ooo')
+        self.assertEqual(self.client.PAGE_HOST, 'whois.nic.page')
+        self.assertEqual(self.client.PANDIHOST, 'whois.pandi.or.id')
+        self.assertEqual(self.client.PE_HOST, 'kero.yachay.pe')
+        self.assertEqual(self.client.PNICHOST, 'whois.apnic.net')
+        self.assertEqual(self.client.QNICHOST_TAIL, '.whois-servers.net')
+        self.assertEqual(self.client.RNICHOST, 'whois.ripe.net')
+        self.assertEqual(self.client.SNICHOST, 'whois.6bone.net')
+        self.assertEqual(self.client.WEBSITE_HOST, 'whois.nic.website')
+        self.assertEqual(self.client.WHOIS_QUICK, 2)
+        self.assertEqual(self.client.WHOIS_RECURSE, 1)
+        self.assertEqual(self.client.ip_whois, ['whois.lacnic.net',
+            'whois.ripe.net', 'whois.apnic.net', 'whois.registro.br',
+            'whois.pandi.or.id'])
+        self.assertFalse(self.client.use_qnichost)
+        with self.assertRaises(LookupError):
+            suffix = domain.split(
+                "$-o>7K\n\\$Q#w,i59xF~#Fiei=Dybr\tGLm2v'SWT;v6,\nrtAwb%;[jQusw\ny5sFf;Df.ehI\\5n(O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:>>)h.ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE^^Rq$-o>7K\n\\$Q#w,i59xF~#Fiei=Dybr\tGLm2v'SWT;v6,\nrtAwb%;[jQusw\ny5sFf;Df.ehI\\5n(O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:>>)h.ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE^^Rq"
+                )[-1].encode(
+                "$-o>7K\n\\$Q#w,i59xF~#Fiei=Dybr\tGLm2v'SWT;v6,\nrtAwb%;[jQusw\ny5sFf;Df.ehI\\5n(O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:>>)h.ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE^^Rq"
+                ).decode(
+                "$-o>7K\n\\$Q#w,i59xF~#Fiei=Dybr\tGLm2v'SWT;v6,\nrtAwb%;[jQusw\ny5sFf;Df.ehI\\5n(O\ne;E*vl_,#-BXLIC,hO*]Slu\tc$;\nO:>>)h.ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE^^Rq"
+                )
+        self.assertEqual(chosen,
+            "ZxPr8~PEd9['GHTXg\rh1_ebpZ]i|3sU72{VqdSQE.whois-servers.net")
+
+    def test_choose_server_str_dbl_0(self):
+        domain = 'рнидс.србрнидс.срб'
+        chosen = self.client.choose_server(domain)
+        self.assertEqual(chosen, 'xn--90a3ac.whois-servers.net')
+        self.assertEqual(self.client.ABUSEHOST, 'whois.abuse.net')
+        self.assertEqual(self.client.AI_HOST, 'whois.nic.ai')
+        self.assertEqual(self.client.ANICHOST, 'whois.arin.net')
+        self.assertEqual(self.client.APP_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.AR_HOST, 'whois.nic.ar')
+        self.assertEqual(self.client.BNICHOST, 'whois.registro.br')
+        self.assertEqual(self.client.BY_HOST, 'whois.cctld.by')
+        self.assertEqual(self.client.CA_HOST, 'whois.ca.fury.ca')
+        self.assertEqual(self.client.CHAT_HOST, 'whois.nic.chat')
+        self.assertEqual(self.client.CL_HOST, 'whois.nic.cl')
+        self.assertEqual(self.client.CR_HOST, 'whois.nic.cr')
+        self.assertEqual(self.client.DEFAULT_PORT, 'nicname')
+        self.assertEqual(self.client.DENICHOST, 'whois.denic.de')
+        self.assertEqual(self.client.DEV_HOST, 'whois.nic.google')
+        self.assertEqual(self.client.DE_HOST, 'whois.denic.de')
+        self.assertEqual(self.client.DK_HOST, 'whois.dk-hostmaster.dk')
+        self.assertEqual(self.client.DNICHOST, 'whois.nic.mil')
+        self.assertEqual(self.client.DO_HOST, 'whois.nic.do')
+        self.assertEqual(self.client.GAMES_HOST, 'whois.nic.games')
+        self.assertEqual(self.client.GNICHOST, 'whois.nic.gov')
+        self.assertEqual(self.client.HK_HOST, 'whois.hkirc.hk')
+        self.assertEqual(self.client.HN_HOST, 'whois.nic.hn')
+        self.assertEqual(self.client.HR_HOST, 'whois.dns.hr')
+        self.assertEqual(self.client.IANAHOST, 'whois.iana.org')
+        self.assertEqual(self.client.INICHOST, 'whois.networksolutions.com')
+        self.assertEqual(self.client.IST_HOST, 'whois.afilias-srs.net')
+        self.assertEqual(self.client.JOBS_HOST, 'whois.nic.jobs')
+        self.assertEqual(self.client.KZ_HOST, 'whois.nic.kz')
+        self.assertEqual(self.client.LAT_HOST, 'whois.nic.lat')
+        self.assertEqual(self.client.LI_HOST, 'whois.nic.li')
+        self.assertEqual(self.client.LNICHOST, 'whois.lacnic.net')
+        self.assertEqual(self.client.MARKET_HOST, 'whois.nic.market')
+        self.assertEqual(self.client.MNICHOST, 'whois.ra.net')
+        self.assertEqual(self.client.MONEY_HOST, 'whois.nic.money')
+        self.assertEqual(self.client.MX_HOST, 'whois.mx')
+        self.assertEqual(self.client.NICHOST, 'whois.crsnic.net')
+        self.assertEqual(self.client.NL_HOST, 'whois.domain-registry.nl')
+        self.assertEqual(self.client.NORIDHOST, 'whois.norid.no')
+        self.assertEqual(self.client.ONLINE_HOST, 'whois.nic.online')
+        self.assertEqual(self.client.OOO_HOST, 'whois.nic.ooo')
+        self.assertEqual(self.client.PAGE_HOST, 'whois.nic.page')
+        self.assertEqual(self.client.PANDIHOST, 'whois.pandi.or.id')
+        self.assertEqual(self.client.PE_HOST, 'kero.yachay.pe')
+        self.assertEqual(self.client.PNICHOST, 'whois.apnic.net')
+        self.assertEqual(self.client.QNICHOST_TAIL, '.whois-servers.net')
+        self.assertEqual(self.client.RNICHOST, 'whois.ripe.net')
+        self.assertEqual(self.client.SNICHOST, 'whois.6bone.net')
+        self.assertEqual(self.client.WEBSITE_HOST, 'whois.nic.website')
+        self.assertEqual(self.client.WHOIS_QUICK, 2)
+        self.assertEqual(self.client.WHOIS_RECURSE, 1)
+        self.assertEqual(self.client.ip_whois, ['whois.lacnic.net',
+            'whois.ripe.net', 'whois.apnic.net', 'whois.registro.br',
+            'whois.pandi.or.id'])
+        self.assertFalse(self.client.use_qnichost)
+        suffix = domain.split('.')[-1].encode('idna').decode('utf-8')
+        correct = '{}.whois-servers.net'.format(suffix)
+        self.assertEqual(chosen, 'xn--90a3ac.whois-servers.net')
+        self.assertEqual(correct, 'xn--90a3ac.whois-servers.net')

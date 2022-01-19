@@ -49,33 +49,14 @@ class TestExtractDomain(unittest.TestCase):
         domain = url
         self.assertEqual(domain, extract_domain(url))
 
-    def test_simple_ascii_domain_amp_str_hlf_0(self):
-        url = 'gle.c'
-        domain = url
-        self.assertEqual(domain, 'gle.c')
-        self.assertEqual(extract_domain(url), 'c')
-
-    def test_simple_ascii_domain_amp_str_emp_0(self):
-        url = ''
-        domain = url
-        self.assertEqual(domain, '')
-        self.assertEqual(extract_domain(url), '')
-
-    def test_simple_ascii_domain_amp_call_dup_0_call_dup_0_str_hlf_0(self):
+    def test_simple_ascii_domain_str_hlf_0(self):
         url = 'ogle.'
         domain = url
         self.assertEqual(domain, 'ogle.')
         self.assertEqual(extract_domain(url), '')
-        self.assertEqual(extract_domain(url), '')
-        self.assertEqual(extract_domain(url), '')
 
-    def test_ipv6_amp_str_dbl_1_str_dbl_0_str_hlf_2(self):
-        """ Verify that ipv6 addresses work """
-        url = (
-            '2607:f8b0:4006:802::200e2607:f8b0:4006:802::200e2607:f8b0:4006:802::200e2607:f8b0:4006:802::200e'
-            )
-        domain = '1e10'
-        self.assertEqual(domain, '1e10')
-        self.assertEqual(extract_domain(extract_domain(url)),
-            '2607:f8b0:4006:802::200e2607:f8b0:4006:802::200e2607:f8b0:4006:802::200e2607:f8b0:4006:802::200e'
-            )
+    def test_simple_ascii_domain_str_emp_0(self):
+        url = ''
+        domain = url
+        self.assertEqual(domain, '')
+        self.assertEqual(extract_domain(url), '')
