@@ -56,7 +56,38 @@ class TestValidators(unittest.TestCase):
         self.assertFalse(Validators.is_valid_address(
             'xrb_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94x'))
 
-    def test_valid_address_amp_str_dbl_3(self):
+    def test_valid_address_str_dbl_7_str_hlf_7(self):
+        """Test address validation"""
+        self.assertFalse(Validators.is_valid_address(None))
+        os.environ['BANANO'] = '1'
+        self.assertTrue(Validators.is_valid_address(
+            'ban_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94xr')
+            )
+        self.assertFalse(Validators.is_valid_address(
+            'ban_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94xa')
+            )
+        self.assertFalse(Validators.is_valid_address(
+            'ban_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94x'))
+        del os.environ['BANANO']
+        self.assertFalse(Validators.is_valid_address(
+            'ie5swmoth87thi74qgbfrij7dcgjiij94xrnano_1bananobh5rat99qfgt1ptpie'
+            ))
+        self.assertFalse(Validators.is_valid_address(
+            'nano_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94xa'
+            ))
+        self.assertFalse(Validators.is_valid_address(
+            'nano_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94x')
+            )
+        self.assertTrue(Validators.is_valid_address(
+            'xrb_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94xr')
+            )
+        self.assertFalse(Validators.is_valid_address(
+            'xrb_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94xa')
+            )
+        self.assertFalse(Validators.is_valid_address(
+            'xrb_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94x'))
+
+    def test_valid_address_str_dbl_3(self):
         """Test address validation"""
         self.assertFalse(Validators.is_valid_address(None))
         os.environ['BANANO'] = '1'
@@ -87,7 +118,7 @@ class TestValidators(unittest.TestCase):
         self.assertFalse(Validators.is_valid_address(
             'xrb_1bananobh5rat99qfgt1ptpieie5swmoth87thi74qgbfrij7dcgjiij94x'))
 
-    def test_valid_address_amp_str_dbl_7(self):
+    def test_valid_address_str_dbl_7(self):
         """Test address validation"""
         self.assertFalse(Validators.is_valid_address(None))
         os.environ['BANANO'] = '1'

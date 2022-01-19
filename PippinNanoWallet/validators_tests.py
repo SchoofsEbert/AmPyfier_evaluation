@@ -20,6 +20,7 @@ class TestValidators(unittest.TestCase):
         self.assertFalse(Validators.is_valid_block_hash('5E5B7C8F97BDA8B90FAA243050D99647F80C25EB4A07E7247114CBB129BDA18Z'))
         # Valid
         self.assertTrue(Validators.is_valid_block_hash('5E5B7C8F97BDA8B90FAA243050D99647F80C25EB4A07E7247114CBB129BDA188'))
+
     def test_valid_address(self):
         """Test address validation"""
         # Null should always be false
