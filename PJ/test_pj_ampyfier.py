@@ -37,10 +37,30 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(pj.from_string('{ "foo" : [1, 2, "three"] }'), {
             'foo': [1, 2, 'three']})
 
-    def test_null_amp_str_dbl_0_call_dup_0_str_hlf_0(self):
-        pj.from_string('{"foo":null}{"foo":null}')
-        with self.assertRaises(IndexError):
-            pj.from_string('}{"foo":null')
+    def test_empty_object_str_emp_0_str_chr_0(self):
+        with self.assertRaises(Exception):
+            pj.from_string('n')
+
+    def test_empty_object_str_hlf_0(self):
+        with self.assertRaises(Exception):
+            pj.from_string('}')
+
+    def test_basic_object_str_hlf_0_str_hlf_0(self):
+        with self.assertRaises(Exception):
+            pj.from_string(':"b')
+
+    def test_basic_object_call_add_0_call_add_1_str_hlf_0(self):
+        with self.assertRaises(Exception):
+            pj.from_string('"foo":')
+
+    def test_nested_object_call_add_0_str_hlf_0_str_dbl_0(self):
+        with self.assertRaises(Exception):
+            pj.from_string('{"bar":2{"bar":2')
+
+    def test_false_call_dup_0_str_hlf_1_str_dbl_0(self):
+        self.assertEqual(pj.from_string('{"foo":false}'), {'foo': False})
+        with self.assertRaises(Exception):
+            pj.from_string('{"foo"{"foo"')
 
 
 if __name__ == '__main__':
