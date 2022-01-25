@@ -1,18 +1,23 @@
 # AmPyfier Evaluation
 Evaluation of AmPyfier on several open-source projects
 
-## Projects
-| **Project** | **Selected test class**|
+## Projects Evaluated
+| **Project** | **Test Class**|
 | --- | --- |
-| [Python Twelve Tone](https://github.com/accraze/python-twelve-tone) | `tests.test_composer.TestMatrix` <br> `tests.test_midi.TestMIDIFile` |
-| [Pippin Nano Wallet](https://github.com/appditto/pippin_nano_wallet) | `tests.validator_tests.TestValidators` <br> `tests.crypt_tests.TestAESCrypt` |
-| [Whois](https://github.com/richardpenman/whois) | `tests.test_main.TestExtractDomain` |
-| [PyPDF2](https://github.com/mstamy2/PyPDF2) | `tests.tests.PdfReaderTestCases` <br> `tests.tests.AddJsTestCase` |
 | [Addict](https://github.com/mewwts/addict) | `test_addict.DictTests` <br> `test_addict.ChildDictTests` |
+| [markdown](https://github.com/Python-Markdown/markdown) | `TestAbbr` <br> `TestAdmonition` <br> `TestAncestorExclusion` <br> `testAtomicString` <br> `TestBlockAppend` <br> `TestBlockParser` <br> `TestBlockParserState` <br> `TestCaseWithAssertStartsWith` <br> `TestCliOptionParsing` <br> `TestConfigParsing` <br> `TestConvertFile` <br> `testElementTailTests` <br> `TestErrors` <br> `TestEscapeAppend` <br> `testETreeComments` <br> `TestExtensionClass` <br> `TestGeneralDeprecations` <br> `TestHtmlStash` <br> `TestMarkdownBasics` <br> `TestMetaData` <br> `testSerializers` <br> `TestSmarty` <br> `TestTOC` <br> `TestVersion` <br> `TestWikiLinks` |
+| [mistune](https://github.com/lepture/mistune) | `TestAstRenderer` <br> `TestMiscCases` <br> `TestPluginAdmonition` <br> `TestPluginDirective` |
 | [MPyQ](https://github.com/eagleflo/mpyq) | `test.test_mpqarchive.TestMPQArchive` |
+| [Pippin Nano Wallet](https://github.com/appditto/pippin_nano_wallet) | `TestAESCrypt` <br> `TestNanoUtil` <br> `TestRandomUtil` <br> `TestValidators` <br> `TestWalletUtil` |
 | [PJ](https://github.com/eatonphil/pj) | `tests.test_pj.TestStringMethods` |
+| [profig](https://github.com/dhagrow/profig) | `TestBasic` <br> `TestStrictMode` |
+| [PyPDF2](https://github.com/mstamy2/PyPDF2) | `tests.tests.PdfReaderTestCases` <br> `tests.tests.AddJsTestCase` |
+| [Python Twelve Tone](https://github.com/accraze/python-twelve-tone) | `tests.test_composer.TestMatrix` <br> `tests.test_midi.TestMIDIFile` |
+| [TheFuzz](https://github.com/dhagrow/profig) | `ProcessTest` <br> `RatioTest` <br> `StringProcessingTest` <br> `TestCodeFormat` <br> `UtilsTest` <br> `ValidatorTest` |
+| [Whois](https://github.com/richardpenman/whois) | `TestExtractDomain` <br> `TestParser` <br> `TestNICClient` |
 
-## Results sorted on original mutation score
+
+## Results Sorted on Original Mutation Score (MSO)
 | Project            | TestClass                    | Methods Added | CSO     | CSA     | CSI   | RCSI  | MSO    | MSA     | MSI    | RMSI    |
 |--------------------|------------------------------|---------------|---------|---------|-------|-------|--------|---------|--------|---------|
 | pippin_nano_wallet | TestRandomUtil               |             0 |    100% |    100% |    0% |    0% |   100% |    100% |   100% |      0% |
@@ -55,20 +60,20 @@ Evaluation of AmPyfier on several open-source projects
 | markdown           | TestSmarty                   |             5 |  50,24% |  50,54% | 0,30% | 0,60% | 78,48% |  79,40% |  0,92% |   1,17% |
 | markdown           | TestMetaData                 |             9 |  47,85% |  54,07% | 6,22% |   13% | 76,23% |  87,18% | 10,95% |  14,36% |
 | markdown           | TestCliOptionParsing         |             2 |    100% |    100% |    0% |    0% | 75,44% |  80,70% |  5,26% |   6,89% |
-| thefuzz            | StringProcessingTest         |             0 |    100% |    100% |    0% | 0,00% | 66,67% |  66,67% |     0% |      0% |
-| thefuzz            | RatioTest                    |            24 |  60,49% |  62,92% | 2,43% | 4,02% | 56,53% |  73,86% | 17,33% |  30,65% |
+| TheFuzz            | StringProcessingTest         |             0 |    100% |    100% |    0% | 0,00% | 66,67% |  66,67% |     0% |      0% |
+| TheFuzz            | RatioTest                    |            24 |  60,49% |  62,92% | 2,43% | 4,02% | 56,53% |  73,86% | 17,33% |  30,65% |
 | whois              | TestNICClient                |             7 |  43,35% |  44,87% | 1,52% | 3,51% | 54,74% |  81,47% | 26,72% |  48,82% |
-| thefuzz            | ProcessTest                  |            22 |  76,60% |  78,72% | 2,13% | 2,78% | 54,25% |  82,53% | 28,28% |  52,12% |
+| TheFuzz            | ProcessTest                  |            22 |  76,60% |  78,72% | 2,13% | 2,78% | 54,25% |  82,53% | 28,28% |  52,12% |
 | profig             | TestBasic                    |            10 |  49,39% |  50,34% | 0,95% | 1,92% | 50,36% |  54,68% |  4,32% |   8,57% |
 | whois              | TestParser                   |            11 |  53,15% |  53,87% | 4,72% | 8,89% | 47,70% |  60,94% | 13,47% |  28,37% |
 | whois              | TestExtractDomain            |             2 |  37,49% |  37,58% | 0,09% | 0,24% | 43,88% |  48,98% |  5,10% |  11,63% |
 | profig             | TestStrictMode               |             8 |  58,62% |  61,19% | 2,58% | 4,40% | 35,11% |  38,42% |  3,31% |   9,42% |
-| thefuzz            | ValidatorTest                |             0 |  28,27% |  28,27% |    0% |    0% | 34,65% |  34,65% |     0% |      0% |
+| TheFuzz            | ValidatorTest                |             0 |  28,27% |  28,27% |    0% |    0% | 34,65% |  34,65% |     0% |      0% |
 | pippin_nano_wallet | TestNanoUtil                 |             0 |  87,50% |  87,50% |    0% |    0% | 29,27% |  29,27% |     0% |      0% |
 | python-twelve-tone | TestMIDIFile                 |             1 | 100,00% | 100,00% | 0,00% | 0,00% | 27,78% | 100,00% | 72,22% | 260,00% |
-| thefuzz            | UtilsTest                    |             0 |  29,79% |  29,79% |    0% |    0% | 19,23% |  19,23% |     0% |      0% |
+| TheFuzz            | UtilsTest                    |             0 |  29,79% |  29,79% |    0% |    0% | 19,23% |  19,23% |     0% |      0% |
 | pippin_nano_wallet | TestWalletUtil               |             0 |  23,53% |  23,53% |    0% |    0% | 12,90% |  12,90% |  0,00% |   0,00% |
-| thefuzz            | TestCodeFormat               |             0 |  26,44% |  26,44% |    0% |    0% |  8,45% |   8,45% |     0% |      0% |
+| TheFuzz            | TestCodeFormat               |             0 |  26,44% |  26,44% |    0% |    0% |  8,45% |   8,45% |     0% |      0% |
 
 Coverage Score (CS) and Mutation Score(MS), of the original test class (..O) and after amplification (..A) and the
 (relative<sup>\*</sup>) increase in mutation score (R..I & ..I), all
