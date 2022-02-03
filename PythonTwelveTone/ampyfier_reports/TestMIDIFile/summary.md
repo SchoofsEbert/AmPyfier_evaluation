@@ -4,7 +4,7 @@
 
 # TestMIDIFile
 
-Command line arguments: `-t tests.test_midi -v
+Command line arguments: `-t tests.test_midi -v`
 Module under test: **twelve_tone.midi**
 Amplified methods added: **1**
 Collapsed time: **0:00:13.155175**

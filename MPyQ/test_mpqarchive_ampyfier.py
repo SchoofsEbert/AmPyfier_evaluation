@@ -90,6 +90,16 @@ FFFFFFFF FFFFFFFF FFFF FFFF FFFFFFFF
 """
             )
 
+    def test_init_with_file_str_dbl_0(self):
+        with self.assertRaises(ValueError):
+            self.archive = MPQArchive(open(TEST_DIR +
+                'test.SC2Replaytest.SC2Replay', 'rb'))
+
+    def test_init_with_file_str_dbl_0_str_hlf_1(self):
+        with self.assertRaises(ValueError):
+            self.archive = MPQArchive(open(TEST_DIR +
+                'test.SC2Replaytest.SC2Replay', 'r'))
+
 
 if __name__ == '__main__':
     unittest.main()

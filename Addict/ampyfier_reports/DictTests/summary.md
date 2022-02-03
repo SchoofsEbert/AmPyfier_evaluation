@@ -3,11 +3,11 @@
 
 
 # DictTests
-  
+
 Command line arguments: `-t test_addict`  
 Module under test: **addict**  
 Amplified methods added: **2**  
-Collapsed time: **2:03:15.589809**
+Collapsed time: **0:53:11.221676**
 ## Coverage
   
 Original Coverage Score: **100.00 %**  
@@ -20,7 +20,7 @@ Newly Covered Lines Amplified: **0**
 Relative Increase in Covered Lines : **0.00 %**  
 Newly covered code generated **0** new mutants
 ## Mutation
-  
+
 Original Mutation Score: **80.52 %**  
 Amplified Mutation Score: **83.12 %**  
 Improved Mutation Score: **2.60 %**  
